@@ -1,0 +1,20 @@
+i:hover {
+    background-color: #c3c9d1; /* Green */
+    color: white;
+}
+
+i.fas {
+    margin-right: 6px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    pointer-events: all;
+
+
+  }
+
+button:hover {
+    background-color: #3e8e41
+}
+
+  
+ 

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "empleados-2e9f5": {
+      "hosting": {
+        "empleados": [
+          "empleados-2e9f5"
+        ]
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
             <span class="h3">Listado de Empleados</span>
-            <button class="btn btn-dark btn-lg float-end">Agregar</button>
+            <button class="btn btn-dark btn-lg float-end" data-toggle="tooltip" data-placement="top" title="Agrega un nuevo empleado" routerLink="/create-empleado">Agregar</button>
             <table class="table table-striped mt-4">
                 <thead>
                   <tr>
@@ -19,24 +19,34 @@
                     <td>Perez</td>
                     <td>04778598-1</td>
                     <td>500</td>
-                    <td></td>
+                    <td>
+                      <i class="fas fa-user-edit fa-lg text-info mr-2"></i>
+                      <i class="fas fa-trash-alt fa-lg text-danger"></i>
+                    </td>
                   </tr>
                   <tr>
                     <td>Pedro</td>
                     <td>Lopez</td>
                     <td>05050505-1</td>
                     <td>600</td>
-                    <td></td>
+                    <td>
+                      <i class="fas fa-user-edit fa-lg text-info mr-2"></i>
+                      <i class="fas fa-trash-alt fa-lg text-danger"></i>
+                    </td>
                   </tr>
                   <tr>
                     <td>Maria</td>
                     <td>Campos</td>
                     <td>03330303-1</td>
                     <td>550</td>
-                    <td></td>
+                    <td>
+                      <i class="fas fa-user-edit fa-lg text-info mr-2"></i>
+                      <i class="fas fa-trash-alt fa-lg text-danger"></i>
+                    </td>
                   </tr>
                 </tbody>
               </table>
+             
 
         </div>
     </div>
