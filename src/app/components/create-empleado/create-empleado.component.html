@@ -3,7 +3,11 @@
         <div class="col-6 offset-lg-3">
             <div class="card text-center">
                 <div class="card-body">
-                <h3>Agregar Empleado</h3>
+                <h3>Agregar Empleado
+                    <div *ngIf='loading' class="spinner-border float-end" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </h3>
                 <span *ngIf="submitted && createEmpleado.invalid" class="badge bg-danger">Todos los campos son oblogatorios</span>
                 <form class="mt-4" [formGroup]="createEmpleado" (ngSubmit)="agregarEmpleado()">
                     <div class="row">

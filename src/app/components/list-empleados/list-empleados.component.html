@@ -14,36 +14,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Juan</td>
-                    <td>Perez</td>
-                    <td>04778598-1</td>
-                    <td>500</td>
+                  <tr *ngFor= "let empleado of empleados"> <!--con ngfor recorremos el array de empleados donde estan los datos de empleados-->
+                    <td>{{empleado.nombre}}</td>
+                    <td>{{empleado.apellido}}</td>
+                    <td>{{empleado.documento}}</td>
+                    <td>{{empleado.salario}}</td>
                     <td>
                       <i class="fas fa-user-edit fa-lg text-info mr-2"></i>
                       <i class="fas fa-trash-alt fa-lg text-danger"></i>
                     </td>
                   </tr>
-                  <tr>
-                    <td>Pedro</td>
-                    <td>Lopez</td>
-                    <td>05050505-1</td>
-                    <td>600</td>
-                    <td>
-                      <i class="fas fa-user-edit fa-lg text-info mr-2"></i>
-                      <i class="fas fa-trash-alt fa-lg text-danger"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Maria</td>
-                    <td>Campos</td>
-                    <td>03330303-1</td>
-                    <td>550</td>
-                    <td>
-                      <i class="fas fa-user-edit fa-lg text-info mr-2"></i>
-                      <i class="fas fa-trash-alt fa-lg text-danger"></i>
-                    </td>
-                  </tr>
+                
                 </tbody>
               </table>
              
