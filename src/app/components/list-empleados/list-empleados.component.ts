@@ -1,7 +1,9 @@
+import { ToastrService } from 'ngx-toastr';
 import { EmpleadoService } from './../../services/empleado.service';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { ProviderMeta } from '@angular/compiler';
 
 
 @Component({
@@ -13,7 +15,9 @@ export class ListEmpleadosComponent implements OnInit {
   empleados: any = [];
 
  
-  constructor(private _empleadoService: EmpleadoService) {
+  constructor(private _empleadoService: EmpleadoService,
+              private toastr:ToastrService) {
+                
    
    }
 
@@ -39,5 +43,18 @@ export class ListEmpleadosComponent implements OnInit {
       
     });
   }
+  //creacion de metodo eliminarEmpleado
+  eliminarEmpleado(id: string){
+    this._empleadoService.eliminarEmpleado(id).then(()=>{
+      console.log('Empleado elimnado con exito');
+      this.toastr.error('El empleado fue eliminado con exito','Registro eliminado!',{
+        positionClass:'toast-bottom-right'
+      })// mensaje de eliminacion
+      
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
 
 }
